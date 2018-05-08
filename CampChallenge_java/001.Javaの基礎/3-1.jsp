@@ -23,15 +23,15 @@ int kake = BASE * num;
 int wari = BASE / num;
 int amari = BASE % num;
 
-out.print(++num);out.println();
-out.print(num++); out.println();
-out.print(--num); out.println();
-out.print(num--);out.println();
-out.print(tasu);out.println();
-out.print(hiku);out.println();
-out.print(kake);out.println();
-out.print(wari);out.println();
-out.print(amari);out.println();
+out.println(++num);
+out.println(num++);
+out.println(--num);
+out.println(num--);
+out.println(tasu);
+out.println(hiku);
+out.println(kake);
+out.println(wari);
+out.println(amari);
 %>
        
     </body>
