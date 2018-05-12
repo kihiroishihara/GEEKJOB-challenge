@@ -18,9 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 public class Mezotto extends HttpServlet {
 
 void myprofile(PrintWriter pw) {
-    pw.print("私の名前は石原希比呂です。<br>");
-    pw.print("好きなお茶は玄米茶です。<br>");
-    pw.print("趣味は天体観測です。<br>");
+    pw.print("名前：石原希比呂<br>");
+    pw.print("生年月日：1995年9月21日<br>");
+    pw.print("自己紹介：箱根駅伝が大好き<br>");
 }
 
             
