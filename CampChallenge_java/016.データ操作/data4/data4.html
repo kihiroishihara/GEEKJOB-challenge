@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>クエリストリングの利用</title>
+    </head>
+    <body>
+        <!--
+        ・_some_project_ ... 自身のプロジェクト名に書き換えてください 
+        ・_some_file_.jsp ... 自身で作成したファイル名等に書き換えてください
+        （ JSP ではなくサーブレットによって処理を記述しても構いません） 
+        -->
+        
+        <form action="./data4.jsp" method="post">
+         <!--total ... 購入した商品の総額を表す-->
+         <p>総額<input type="text" name="total">円</p><br>
+         <!--count ... 購入した商品の数量を表す-->
+         <p>数量<input type="text" name="count">個</p><br>
+         <!--type ... 商品種別を表す--> 
+         <!--1 が「雑貨」，2 が「生鮮食品」， 3 が「その他」と対応します-->
+         <select name="type">
+         <option value="">選択してください</option>
+         <option value="1">雑貨</option>
+         <option value="2">生食食品</option>
+         <option value="3">その他</option>
+         </select> <br><br>
+         <!-- 送信 --> 
+         <input type="submit" name="submit" value="送信">
+         </form>
+     </body>
+</html>
