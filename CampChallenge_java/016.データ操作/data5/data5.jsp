@@ -23,6 +23,7 @@
          request.setCharacterEncoding("UTF-8");
          //文字列を数字に型変換
          int X = Integer.parseInt(request.getParameter("Primefactors"));
+         int Y = X ;
          //入力数字＝
          out.println(X + "=");
          
@@ -37,11 +38,14 @@
          
          //あまりの表示
          if(X != 1){
-             out.println("あまり" + X);
+             if(X == Y){
+                 out.println("この数字は素数です。");    
+             }else{
+             out.println("1 あまり" + X);
+             }
          }
-         if(X < 8){
-             out.println(1);
-         }
+         
+         
          
          %>
     </body>
