@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>入力フィールドの作成と実装</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--名前，性別，趣味の情報をフォームによって送信することができる。-->
+        
+        <form action="./data8.jsp" method="post">
+         <!-- 名前情報（テキストボックスで作成 -->
+         <p>氏名<input type="text" name="Name"></p><br>
+         <!-- 性別情報（ラジオボタンで作成） -->
+         <p>男<input type="radio" name="Sex" value="men"></p>
+         <p>女<input type="radio" name="Sex" value="rady"></p><br>
+         <!-- 趣味情報（テキストエリアで作成） --> 
+         <p>趣味<textarea name="Text"></textarea></p>
+         <!-- 送信 --> 
+         <input type="submit" name="submit" value="送信">
+         </form>
+    </body>
+</html>
