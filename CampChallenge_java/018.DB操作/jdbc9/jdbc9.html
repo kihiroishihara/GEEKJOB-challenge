@@ -1,0 +1,22 @@
+
+<html>
+    <head>
+        <title>フォームからデータを挿入</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="./jdbc9" method="post">
+         <!--profilesID,name,tel,age,birthday-->
+         <p>ユーザー情報の追加</p>
+         <p>ID(任意の2桁の整数)<br><input type="text" name="ID"></p>
+         <p>氏名<br><input type="text" name="name"></p>
+         <p>電話番号(例000-0000-0000)<br><input type="text" name="tel"></p>
+         <p>年齢<br><input type="text" name="age"></p>
+         <p>生年月日(例1995-1-1)<br><input type="text" name="birthday"></p>
+         <br>
+         <!-- 送信 --> 
+         <input type="submit" name="submit" value="送信">
+         </form>
+     </body>
+</html>
