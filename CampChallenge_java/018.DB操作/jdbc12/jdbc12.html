@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>複合検索</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="./jdbc12" method="post">
+          <p>プロフィール情報の検索(全一致検索)</p>
+         <!--profilesID,name,tel,age,birthday-->
+         <p>氏名<br><input type="text" name="name" required></p>
+         <p>年齢<br><input type="text" name="age" required></p>
+         <p>生年月日(例1995-1-1)<br><input type="text" name="birthday" required></p>
+         <br>
+         <!-- 送信 --> 
+         <input type="submit" name="submit" value="送信">
+         </form>
+     </body>
+</html>
