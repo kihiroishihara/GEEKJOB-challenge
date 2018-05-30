@@ -2,7 +2,8 @@ package jums;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,19 +30,27 @@ public class InsertResult extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        //セッションスタート
-        HttpSession session = request.getSession();
-        
         try{
+            HttpSession session = request.getSession();
+            request.setCharacterEncoding("UTF-8");//セッションに格納する文字コードをUTF-8に変更
+            String accesschk = request.getParameter("ac");
+            if(accesschk ==null || (Integer)session.getAttribute("ac")!=Integer.parseInt(accesschk)){
+                throw new Exception("不正なアクセスです");
+            }
             //ユーザー情報に対応したJavaBeansオブジェクトに格納していく
+            UserDataBeans udb = (UserDataBeans) session.getAttribute("udb");
             UserDataDTO userdata = new UserDataDTO();
-            userdata.setName((String)session.getAttribute("name"));
-            Calendar birthday = Calendar.getInstance();
-            userdata.setBirthday(birthday.getTime());
-            userdata.setType(Integer.parseInt((String)session.getAttribute("type")));
-            userdata.setTell((String)session.getAttribute("tell"));
-            userdata.setComment((String)session.getAttribute("comment"));
+            userdata.setName(udb.getName());
+            // 「生年月日」に変換
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            Date birthday = sdf.parse(udb.getYear() + "-" + udb.getMonth() + "-" + udb.getDay());
+            userdata.setBirthday(birthday);
+            userdata.setType(Integer.parseInt(udb.getType()));
+            userdata.setTell(udb.getTell());
+            userdata.setComment(udb.getComment());
             
+            //セッションに格納
+            session.setAttribute("userdata", userdata);
             //DBへデータの挿入
             UserDataDAO .getInstance().insert(userdata);
             
