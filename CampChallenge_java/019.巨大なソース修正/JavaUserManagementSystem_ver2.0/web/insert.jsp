@@ -10,7 +10,6 @@
         reinput = true;
         udb = (UserDataBeans)hs.getAttribute("udb");
     }
-
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

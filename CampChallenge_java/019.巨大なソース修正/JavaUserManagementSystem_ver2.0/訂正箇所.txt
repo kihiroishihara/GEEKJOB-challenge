@@ -1,0 +1,34 @@
+1.searchresultにて、生年月日表示から生年表示に変更。
+　searchresult.jsp　
+
+2.searchresultにて、種別を番号ではなく種別名で表示するように変更。
+　searchresult.jsp　
+
+3.searchresultにて、検索画面に戻るボタンを追加。
+　searchresult.jsp　
+
+4.resultdatailにて、検索画面に戻るボタンを追加。
+　resultdatail.jsp　　
+
+5.直リンク防止を不足ページに追加。
+　SearchResult.java　
+
+6.結果一覧からユーザー詳細ページへのリンクが誤っているので訂正。
+　ResultDatail.java　
+
+7.複数件該当した場合、全件表示させる。
+  UserDataDAO.java
+  searchresult.jsp
+ 
+8.全て入力してなくても検索可能に。
+   UserDataDAO.java
+
+9.変更ページ
+  Update.java　　　　
+　UpdateResult.java　
+　UserDataDAO.java
+
+10.削除ページの修正
+　 Delete.java　　　　
+　 DeleteResult.java　
+　 UserDataDAO.java 　

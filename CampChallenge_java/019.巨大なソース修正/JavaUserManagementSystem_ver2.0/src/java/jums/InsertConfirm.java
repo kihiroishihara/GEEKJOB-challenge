@@ -31,7 +31,8 @@ public class InsertConfirm extends HttpServlet {
         HttpSession session = request.getSession();
         
         try{
-            request.setCharacterEncoding("UTF-8");//リクエストパラメータの文字コードをUTF-8に変更
+            //リクエストパラメータの文字コードをUTF-8に変更
+            request.setCharacterEncoding("UTF-8");
             
             //アクセスルートチェック
             String accesschk = request.getParameter("ac");

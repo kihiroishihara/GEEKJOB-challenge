@@ -31,7 +31,8 @@ public class InsertResult extends HttpServlet {
         HttpSession session = request.getSession();
         
         try{
-            request.setCharacterEncoding("UTF-8");//リクエストパラメータの文字コードをUTF-8に変更
+            //リクエストパラメータの文字コードをUTF-8に変更
+            request.setCharacterEncoding("UTF-8");
             
             //アクセスルートチェック
             String accesschk = request.getParameter("ac");
@@ -39,6 +40,7 @@ public class InsertResult extends HttpServlet {
                 throw new Exception("不正なアクセスです");
             }
             
+            //セッションに格納したユーザー情報群を呼び出し
             UserDataBeans udb = (UserDataBeans)session.getAttribute("udb");
             
             //DTOオブジェクトにマッピング。DB専用のパラメータに変換

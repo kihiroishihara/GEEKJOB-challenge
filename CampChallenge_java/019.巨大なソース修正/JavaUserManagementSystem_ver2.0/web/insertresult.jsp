@@ -18,8 +18,8 @@
         生年月日:<%= udb.getYear()+"年"+udb.getMonth()+"月"+udb.getDay()+"日"%><br>
         種別:<%= jh.exTypenum(udb.getType())%><br>
         電話番号:<%= udb.getTell()%><br>
-        自己紹介:<%= udb.getComment()%><br>
+        自己紹介:<%= udb.getComment()%><br><br>
         以上の内容で登録しました。<br>
-    </body>
+    </body><br><br>
     <%=jh.home()%>
 </html>
